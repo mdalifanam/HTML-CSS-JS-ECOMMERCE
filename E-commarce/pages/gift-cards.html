@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Cards | E-COMMERCE</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="font-['Inter'] bg-white text-gray-900 antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-black tracking-tight">E‑COMMERCE</a>
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10">
+                    <a href="shop.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Shop</a>
+                    <a href="categories.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Categories</a>
+                    <a href="blog.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Journal</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Connect</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="login.html" class="text-gray-700 hover:text-black transition hidden sm:block">
+                        <i class="far fa-user text-lg"></i>
+                    </a>
+                    <a href="wishlist.html" class="text-gray-700 hover:text-black transition relative hidden sm:block">
+                        <i class="far fa-heart text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+                    </a>
+                    <a href="cart.html" class="text-gray-700 hover:text-black transition relative">
+                        <i class="fas fa-shopping-bag text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">2</span>
+                    </a>
+                    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="shop.html" class="block text-gray-800 hover:text-black py-2 text-base">Shop</a>
+                <a href="categories.html" class="block text-gray-800 hover:text-black py-2 text-base">Categories</a>
+                <a href="blog.html" class="block text-gray-800 hover:text-black py-2 text-base">Journal</a>
+                <a href="contact.html" class="block text-gray-800 hover:text-black py-2 text-base">Connect</a>
+                <div class="pt-4 flex space-x-4 text-gray-600">
+                    <a href="login.html" class="hover:text-black"><i class="far fa-user"></i> Login</a>
+                    <a href="wishlist.html" class="hover:text-black"><i class="far fa-heart"></i> Wishlist</a>
+                    <a href="cart.html" class="hover:text-black"><i class="fas fa-shopping-bag"></i> Cart</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-black">Home</a> <span class="mx-2">/</span>
+                <span class="text-black">Gift Cards</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative h-[400px] bg-black">
+        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Gift Cards" class="absolute inset-0 w-full h-full object-cover object-center opacity-50">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="relative z-10 h-full flex items-center justify-center text-center text-white">
+            <div>
+                <h1 class="font-['Playfair_Display'] text-5xl md:text-6xl font-bold mb-4">Gift Cards</h1>
+                <p class="text-xl">The perfect gift for the minimalist in your life.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Card Options -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-['Playfair_Display'] text-4xl font-bold mb-4">Choose an Amount</h2>
+                <p class="text-gray-600 text-lg">Select a pre-set value or enter your own.</p>
+            </div>
+
+            <!-- Pre-set amounts -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <button class="border-2 border-gray-200 p-6 text-center hover:border-black transition font-bold text-xl">$25</button>
+                <button class="border-2 border-gray-200 p-6 text-center hover:border-black transition font-bold text-xl">$50</button>
+                <button class="border-2 border-gray-200 p-6 text-center hover:border-black transition font-bold text-xl">$100</button>
+                <button class="border-2 border-gray-200 p-6 text-center hover:border-black transition font-bold text-xl">$200</button>
+            </div>
+
+            <!-- Custom amount -->
+            <div class="max-w-md mx-auto">
+                <label class="block text-sm font-medium mb-2">Or enter custom amount ($10 - $500)</label>
+                <div class="flex">
+                    <span class="inline-flex items-center px-3 border border-r-0 border-gray-300 bg-gray-50 text-gray-500">$</span>
+                    <input type="number" min="10" max="500" value="75" class="flex-1 border border-gray-300 p-3 focus:outline-none focus:border-black">
+                </div>
+            </div>
+
+            <!-- Delivery options -->
+            <div class="mt-12 max-w-md mx-auto">
+                <h3 class="font-bold text-lg mb-4">Delivery Method</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center p-4 border border-gray-200 hover:border-black cursor-pointer">
+                        <input type="radio" name="delivery" class="form-radio h-4 w-4 text-black focus:ring-black" checked>
+                        <span class="ml-3">
+                            <span class="font-medium">Email</span>
+                            <span class="text-sm text-gray-600 block">Delivered instantly to recipient's inbox</span>
+                        </span>
+                    </label>
+                    <label class="flex items-center p-4 border border-gray-200 hover:border-black cursor-pointer">
+                        <input type="radio" name="delivery" class="form-radio h-4 w-4 text-black focus:ring-black">
+                        <span class="ml-3">
+                            <span class="font-medium">Print at home</span>
+                            <span class="text-sm text-gray-600 block">PDF file you can print and give personally</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Recipient info -->
+            <div class="mt-12 max-w-md mx-auto">
+                <h3 class="font-bold text-lg mb-4">Recipient Information</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Recipient's Name</label>
+                        <input type="text" class="w-full border border-gray-300 p-3 focus:outline-none focus:border-black">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Recipient's Email</label>
+                        <input type="email" class="w-full border border-gray-300 p-3 focus:outline-none focus:border-black">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Personal Message (optional)</label>
+                        <textarea rows="3" class="w-full border border-gray-300 p-3 focus:outline-none focus:border-black" placeholder="Write a heartfelt note..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add to Cart -->
+            <div class="mt-12 text-center">
+                <button class="bg-black text-white px-12 py-4 font-bold uppercase tracking-wider hover:bg-gray-800 transition">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <i class="fas fa-bolt text-3xl mb-3"></i>
+                    <h3 class="font-bold text-lg">Instant Delivery</h3>
+                    <p class="text-gray-600">Email delivery within minutes.</p>
+                </div>
+                <div>
+                    <i class="fas fa-calendar-alt text-3xl mb-3"></i>
+                    <h3 class="font-bold text-lg">No Expiration</h3>
+                    <p class="text-gray-600">Gift cards never expire.</p>
+                </div>
+                <div>
+                    <i class="fas fa-gift text-3xl mb-3"></i>
+                    <h3 class="font-bold text-lg">Any Product</h3>
+                    <p class="text-gray-600">Redeemable on the entire store.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-['Playfair_Display'] text-3xl font-bold text-center mb-8">Gift Card FAQ</h2>
+            <div class="space-y-4">
+                <div class="border border-gray-200 p-4">
+                    <h3 class="font-bold mb-2">Can I use multiple gift cards on one order?</h3>
+                    <p class="text-gray-600">Yes, you can apply up to three gift cards per order.</p>
+                </div>
+                <div class="border border-gray-200 p-4">
+                    <h3 class="font-bold mb-2">Can I return a gift card?</h3>
+                    <p class="text-gray-600">Gift cards are non-refundable, but you can transfer them to another person.</p>
+                </div>
+                <div class="border border-gray-200 p-4">
+                    <h3 class="font-bold mb-2">What if I don't receive my gift card email?</h3>
+                    <p class="text-gray-600">Check your spam folder first. If it's not there, <a href="contact.html" class="text-black underline">contact us</a> and we'll resend it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-white mb-4 inline-block">E‑COMMERCE</a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Curating the finest minimalist essentials since 2020.</p>
+                    <div class="flex space-x-5">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Shop</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="shop.html" class="hover:text-white transition">All Products</a></li>
+                        <li><a href="categories.html" class="hover:text-white transition">Categories</a></li>
+                        <li><a href="flash-sale.html" class="hover:text-white transition">Flash Sale</a></li>
+                        <li><a href="gift-cards.html" class="hover:text-white transition">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Support</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="shipping.html" class="hover:text-white transition">Shipping</a></li>
+                        <li><a href="returns.html" class="hover:text-white transition">Returns</a></li>
+                        <li><a href="track.html" class="hover:text-white transition">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Journal</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">Terms</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 E-COMMERCE. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                    <a href="shipping.html" class="hover:text-white transition">Shipping Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

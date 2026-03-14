@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | E-COMMERCE</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-answer.open {
+            max-height: 300px; /* adjust as needed */
+        }
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="font-['Inter'] bg-white text-gray-900 antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-black tracking-tight">E‑COMMERCE</a>
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10">
+                    <a href="shop.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Shop</a>
+                    <a href="categories.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Categories</a>
+                    <a href="blog.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Journal</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Connect</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="login.html" class="text-gray-700 hover:text-black transition hidden sm:block">
+                        <i class="far fa-user text-lg"></i>
+                    </a>
+                    <a href="wishlist.html" class="text-gray-700 hover:text-black transition relative hidden sm:block">
+                        <i class="far fa-heart text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+                    </a>
+                    <a href="cart.html" class="text-gray-700 hover:text-black transition relative">
+                        <i class="fas fa-shopping-bag text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">2</span>
+                    </a>
+                    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="shop.html" class="block text-gray-800 hover:text-black py-2 text-base">Shop</a>
+                <a href="categories.html" class="block text-gray-800 hover:text-black py-2 text-base">Categories</a>
+                <a href="blog.html" class="block text-gray-800 hover:text-black py-2 text-base">Journal</a>
+                <a href="contact.html" class="block text-gray-800 hover:text-black py-2 text-base">Connect</a>
+                <div class="pt-4 flex space-x-4 text-gray-600">
+                    <a href="login.html" class="hover:text-black"><i class="far fa-user"></i> Login</a>
+                    <a href="wishlist.html" class="hover:text-black"><i class="far fa-heart"></i> Wishlist</a>
+                    <a href="cart.html" class="hover:text-black"><i class="fas fa-shopping-bag"></i> Cart</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-black">Home</a> <span class="mx-2">/</span>
+                <span class="text-black">FAQ</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h1>
+            <p class="text-gray-600 text-lg">Find answers to common questions about our products, shipping, returns, and more.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Search (optional) -->
+    <section class="pb-8">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative">
+                <input type="text" placeholder="Search FAQs..." class="w-full border border-gray-300 p-4 pl-12 focus:outline-none focus:border-black">
+                <i class="fas fa-search absolute left-4 top-5 text-gray-400"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories Tabs (optional) -->
+    <section class="pb-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-2">
+                <button class="px-4 py-2 bg-black text-white text-sm font-medium">All</button>
+                <button class="px-4 py-2 border border-gray-300 text-sm font-medium hover:bg-black hover:text-white transition">Orders</button>
+                <button class="px-4 py-2 border border-gray-300 text-sm font-medium hover:bg-black hover:text-white transition">Shipping</button>
+                <button class="px-4 py-2 border border-gray-300 text-sm font-medium hover:bg-black hover:text-white transition">Returns</button>
+                <button class="px-4 py-2 border border-gray-300 text-sm font-medium hover:bg-black hover:text-white transition">Products</button>
+                <button class="px-4 py-2 border border-gray-300 text-sm font-medium hover:bg-black hover:text-white transition">Account</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="pb-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-lg">How long does shipping take?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="pb-6 text-gray-600">Standard shipping typically takes 3-5 business days within the continental US. Express shipping (1-2 business days) is available at checkout. International shipping can take 7-14 business days depending on the destination.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-lg">What is your return policy?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="pb-6 text-gray-600">We accept returns within 30 days of delivery for unused items in original packaging. To initiate a return, visit our <a href="returns.html" class="text-black underline">Returns Portal</a>. Refunds are processed within 5-7 business days after we receive the item.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-lg">Do you ship internationally?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="pb-6 text-gray-600">Yes, we ship to most countries worldwide. Shipping costs and delivery times vary by location. Duties and taxes may apply and are the responsibility of the customer.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-lg">How can I track my order?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="pb-6 text-gray-600">Once your order ships, you'll receive a confirmation email with tracking information. You can also track your order from your <a href="my-orders.html" class="text-black underline">My Orders</a> page after logging into your account.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="border border-gray-200">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-lg">Are your products cruelty-free?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="pb-6 text-gray-600">Yes, all our products are 100% cruelty-free and never tested on animals. We are certified by Leaping Bunny and PETA.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="border border-gray-200">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-lg">Can I change or cancel my order?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="pb-6 text-gray-600">You can modify or cancel your order within 1 hour of placing it. Contact our support team immediately at <a href="contact.html" class="text-black underline">Contact Us</a> with your order number.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="border border-gray-200">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-lg">Do you offer gift cards?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="pb-6 text-gray-600">Yes! We offer digital gift cards in various denominations. They are delivered via email and never expire. Visit our <a href="gift-cards.html" class="text-black underline">Gift Cards</a> page to purchase.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="border border-gray-200">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-lg">What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="pb-6 text-gray-600">We accept Visa, Mastercard, American Express, Discover, PayPal, Apple Pay, and Google Pay.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Still have questions? -->
+            <div class="mt-12 text-center p-8 bg-gray-50">
+                <h2 class="font-['Playfair_Display'] text-2xl font-bold mb-3">Still have questions?</h2>
+                <p class="text-gray-600 mb-6">Can't find the answer you're looking for? Please contact our support team.</p>
+                <a href="contact.html" class="inline-block bg-black text-white px-8 py-3 font-bold uppercase tracking-wider hover:bg-gray-800 transition">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as before) -->
+    <footer class="bg-black text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-white mb-4 inline-block">E‑COMMERCE</a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Curating the finest minimalist essentials since 2020.</p>
+                    <div class="flex space-x-5">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Shop</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="shop.html" class="hover:text-white transition">All Products</a></li>
+                        <li><a href="categories.html" class="hover:text-white transition">Categories</a></li>
+                        <li><a href="flash-sale.html" class="hover:text-white transition">Flash Sale</a></li>
+                        <li><a href="gift-cards.html" class="hover:text-white transition">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Support</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="shipping.html" class="hover:text-white transition">Shipping</a></li>
+                        <li><a href="returns.html" class="hover:text-white transition">Returns</a></li>
+                        <li><a href="track.html" class="hover:text-white transition">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Journal</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">Terms</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 E-COMMERCE. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                    <a href="shipping.html" class="hover:text-white transition">Shipping Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // FAQ Accordion Toggle
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // Close all other open FAQs (optional - for better UX)
+            document.querySelectorAll('.faq-answer.open').forEach(el => {
+                if (el !== answer) {
+                    el.classList.remove('open');
+                    el.previousElementSibling.querySelector('i').classList.remove('rotate-180');
+                }
+            });
+
+            // Toggle current
+            answer.classList.toggle('open');
+            icon.classList.toggle('rotate-180');
+        }
+    </script>
+</body>
+</html>

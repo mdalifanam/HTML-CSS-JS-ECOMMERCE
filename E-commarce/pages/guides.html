@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guides | E-COMMERCE</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="font-['Inter'] bg-white text-gray-900 antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-black tracking-tight">E‑COMMERCE</a>
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10">
+                    <a href="shop.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Shop</a>
+                    <a href="categories.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Categories</a>
+                    <a href="blog.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Journal</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Connect</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="login.html" class="text-gray-700 hover:text-black transition hidden sm:block">
+                        <i class="far fa-user text-lg"></i>
+                    </a>
+                    <a href="wishlist.html" class="text-gray-700 hover:text-black transition relative hidden sm:block">
+                        <i class="far fa-heart text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+                    </a>
+                    <a href="cart.html" class="text-gray-700 hover:text-black transition relative">
+                        <i class="fas fa-shopping-bag text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">2</span>
+                    </a>
+                    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="shop.html" class="block text-gray-800 hover:text-black py-2 text-base">Shop</a>
+                <a href="categories.html" class="block text-gray-800 hover:text-black py-2 text-base">Categories</a>
+                <a href="blog.html" class="block text-gray-800 hover:text-black py-2 text-base">Journal</a>
+                <a href="contact.html" class="block text-gray-800 hover:text-black py-2 text-base">Connect</a>
+                <div class="pt-4 flex space-x-4 text-gray-600">
+                    <a href="login.html" class="hover:text-black"><i class="far fa-user"></i> Login</a>
+                    <a href="wishlist.html" class="hover:text-black"><i class="far fa-heart"></i> Wishlist</a>
+                    <a href="cart.html" class="hover:text-black"><i class="fas fa-shopping-bag"></i> Cart</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-black">Home</a> <span class="mx-2">/</span>
+                <span class="text-black">Guides</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-4">Buying Guides</h1>
+            <p class="text-gray-600 text-lg">Expert advice to help you make informed choices.</p>
+        </div>
+    </section>
+
+    <!-- Guides Grid -->
+    <section class="pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Guide 1 -->
+                <div class="group border border-gray-200 hover:shadow-lg transition">
+                    <a href="#" class="block overflow-hidden bg-gray-100">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Skincare guide" class="w-full h-56 object-cover object-center group-hover:scale-105 transition duration-700">
+                    </a>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-wider text-gray-500">Skincare</span>
+                        <h2 class="font-['Playfair_Display'] text-xl font-bold mt-2 mb-3"><a href="#" class="hover:text-gray-600">How to Build a Minimalist Skincare Routine</a></h2>
+                        <p class="text-gray-600 mb-4">Learn which products you actually need for healthy, glowing skin without the clutter.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-medium uppercase tracking-wider border-b border-black pb-0.5 hover:text-gray-600 transition">Read Guide <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+
+                <!-- Guide 2 -->
+                <div class="group border border-gray-200 hover:shadow-lg transition">
+                    <a href="#" class="block overflow-hidden bg-gray-100">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Fragrance guide" class="w-full h-56 object-cover object-center group-hover:scale-105 transition duration-700">
+                    </a>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-wider text-gray-500">Fragrance</span>
+                        <h2 class="font-['Playfair_Display'] text-xl font-bold mt-2 mb-3"><a href="#" class="hover:text-gray-600">The Complete Guide to Layering Scents</a></h2>
+                        <p class="text-gray-600 mb-4">Create your signature scent by combining fragrances like a pro.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-medium uppercase tracking-wider border-b border-black pb-0.5 hover:text-gray-600 transition">Read Guide <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+
+                <!-- Guide 3 -->
+                <div class="group border border-gray-200 hover:shadow-lg transition">
+                    <a href="#" class="block overflow-hidden bg-gray-100">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Body care guide" class="w-full h-56 object-cover object-center group-hover:scale-105 transition duration-700">
+                    </a>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-wider text-gray-500">Body Care</span>
+                        <h2 class="font-['Playfair_Display'] text-xl font-bold mt-2 mb-3"><a href="#" class="hover:text-gray-600">Essential Body Care Products for Soft Skin</a></h2>
+                        <p class="text-gray-600 mb-4">From exfoliation to hydration, here's what your body really needs.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-medium uppercase tracking-wider border-b border-black pb-0.5 hover:text-gray-600 transition">Read Guide <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+
+                <!-- Guide 4 -->
+                <div class="group border border-gray-200 hover:shadow-lg transition">
+                    <a href="#" class="block overflow-hidden bg-gray-100">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Hair care guide" class="w-full h-56 object-cover object-center group-hover:scale-105 transition duration-700">
+                    </a>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-wider text-gray-500">Hair Care</span>
+                        <h2 class="font-['Playfair_Display'] text-xl font-bold mt-2 mb-3"><a href="#" class="hover:text-gray-600">Choosing the Right Shampoo for Your Hair Type</a></h2>
+                        <p class="text-gray-600 mb-4">Understand ingredients and find the perfect match for your hair.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-medium uppercase tracking-wider border-b border-black pb-0.5 hover:text-gray-600 transition">Read Guide <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+
+                <!-- Guide 5 -->
+                <div class="group border border-gray-200 hover:shadow-lg transition">
+                    <a href="#" class="block overflow-hidden bg-gray-100">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Gift guide" class="w-full h-56 object-cover object-center group-hover:scale-105 transition duration-700">
+                    </a>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-wider text-gray-500">Gifting</span>
+                        <h2 class="font-['Playfair_Display'] text-xl font-bold mt-2 mb-3"><a href="#" class="hover:text-gray-600">The Minimalist Gift Guide</a></h2>
+                        <p class="text-gray-600 mb-4">Thoughtful, high-quality gifts for the design-conscious.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-medium uppercase tracking-wider border-b border-black pb-0.5 hover:text-gray-600 transition">Read Guide <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+
+                <!-- Guide 6 -->
+                <div class="group border border-gray-200 hover:shadow-lg transition">
+                    <a href="#" class="block overflow-hidden bg-gray-100">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Sustainability guide" class="w-full h-56 object-cover object-center group-hover:scale-105 transition duration-700">
+                    </a>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-wider text-gray-500">Sustainability</span>
+                        <h2 class="font-['Playfair_Display'] text-xl font-bold mt-2 mb-3"><a href="#" class="hover:text-gray-600">How to Choose Eco-Friendly Beauty Products</a></h2>
+                        <p class="text-gray-600 mb-4">Look for these certifications and ingredients to shop more sustainably.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-medium uppercase tracking-wider border-b border-black pb-0.5 hover:text-gray-600 transition">Read Guide <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="py-16 bg-black text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl font-bold mb-4">Get New Guides in Your Inbox</h2>
+            <p class="text-gray-300 text-lg mb-8">Subscribe to our newsletter for the latest tips and expert advice.</p>
+            <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="Your email address" class="flex-1 px-4 py-3 text-black focus:outline-none">
+                <button type="submit" class="bg-white text-black px-6 py-3 font-bold uppercase tracking-wider hover:bg-gray-200 transition">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-white mb-4 inline-block">E‑COMMERCE</a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Curating the finest minimalist essentials since 2020.</p>
+                    <div class="flex space-x-5">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Shop</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="shop.html" class="hover:text-white transition">All Products</a></li>
+                        <li><a href="categories.html" class="hover:text-white transition">Categories</a></li>
+                        <li><a href="flash-sale.html" class="hover:text-white transition">Flash Sale</a></li>
+                        <li><a href="gift-cards.html" class="hover:text-white transition">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Support</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="shipping.html" class="hover:text-white transition">Shipping</a></li>
+                        <li><a href="returns.html" class="hover:text-white transition">Returns</a></li>
+                        <li><a href="track.html" class="hover:text-white transition">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Journal</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">Terms</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 E-COMMERCE. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                    <a href="shipping.html" class="hover:text-white transition">Shipping Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center | E-COMMERCE</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="font-['Inter'] bg-white text-gray-900 antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-black tracking-tight">E‑COMMERCE</a>
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10">
+                    <a href="shop.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Shop</a>
+                    <a href="categories.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Categories</a>
+                    <a href="blog.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Journal</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Connect</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="login.html" class="text-gray-700 hover:text-black transition hidden sm:block">
+                        <i class="far fa-user text-lg"></i>
+                    </a>
+                    <a href="wishlist.html" class="text-gray-700 hover:text-black transition relative hidden sm:block">
+                        <i class="far fa-heart text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+                    </a>
+                    <a href="cart.html" class="text-gray-700 hover:text-black transition relative">
+                        <i class="fas fa-shopping-bag text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">2</span>
+                    </a>
+                    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="shop.html" class="block text-gray-800 hover:text-black py-2 text-base">Shop</a>
+                <a href="categories.html" class="block text-gray-800 hover:text-black py-2 text-base">Categories</a>
+                <a href="blog.html" class="block text-gray-800 hover:text-black py-2 text-base">Journal</a>
+                <a href="contact.html" class="block text-gray-800 hover:text-black py-2 text-base">Connect</a>
+                <div class="pt-4 flex space-x-4 text-gray-600">
+                    <a href="login.html" class="hover:text-black"><i class="far fa-user"></i> Login</a>
+                    <a href="wishlist.html" class="hover:text-black"><i class="far fa-heart"></i> Wishlist</a>
+                    <a href="cart.html" class="hover:text-black"><i class="fas fa-shopping-bag"></i> Cart</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-black">Home</a> <span class="mx-2">/</span>
+                <span class="text-black">Help Center</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-4">Help Center</h1>
+            <p class="text-gray-600 text-lg">Find answers to common questions and get support.</p>
+        </div>
+    </section>
+
+    <!-- Search -->
+    <section class="pb-8">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative">
+                <input type="text" placeholder="Search for help..." class="w-full border border-gray-300 p-4 pl-12 focus:outline-none focus:border-black">
+                <i class="fas fa-search absolute left-4 top-5 text-gray-400"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Categories -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-['Playfair_Display'] text-3xl font-bold text-center mb-8">Browse by Topic</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#" class="group border border-gray-200 p-8 text-center hover:border-black transition">
+                    <i class="fas fa-shopping-cart text-4xl mb-4 text-gray-700 group-hover:text-black"></i>
+                    <h3 class="font-bold text-lg mb-1">Orders</h3>
+                    <p class="text-sm text-gray-600">Placing, modifying, canceling</p>
+                </a>
+                <a href="#" class="group border border-gray-200 p-8 text-center hover:border-black transition">
+                    <i class="fas fa-truck text-4xl mb-4 text-gray-700 group-hover:text-black"></i>
+                    <h3 class="font-bold text-lg mb-1">Shipping</h3>
+                    <p class="text-sm text-gray-600">Delivery times, tracking, costs</p>
+                </a>
+                <a href="#" class="group border border-gray-200 p-8 text-center hover:border-black transition">
+                    <i class="fas fa-undo-alt text-4xl mb-4 text-gray-700 group-hover:text-black"></i>
+                    <h3 class="font-bold text-lg mb-1">Returns</h3>
+                    <p class="text-sm text-gray-600">Policy, process, refunds</p>
+                </a>
+                <a href="#" class="group border border-gray-200 p-8 text-center hover:border-black transition">
+                    <i class="fas fa-credit-card text-4xl mb-4 text-gray-700 group-hover:text-black"></i>
+                    <h3 class="font-bold text-lg mb-1">Payments</h3>
+                    <p class="text-sm text-gray-600">Methods, issues, security</p>
+                </a>
+                <a href="#" class="group border border-gray-200 p-8 text-center hover:border-black transition">
+                    <i class="fas fa-user-circle text-4xl mb-4 text-gray-700 group-hover:text-black"></i>
+                    <h3 class="font-bold text-lg mb-1">Account</h3>
+                    <p class="text-sm text-gray-600">Login, settings, passwords</p>
+                </a>
+                <a href="#" class="group border border-gray-200 p-8 text-center hover:border-black transition">
+                    <i class="fas fa-gift text-4xl mb-4 text-gray-700 group-hover:text-black"></i>
+                    <h3 class="font-bold text-lg mb-1">Gift Cards</h3>
+                    <p class="text-sm text-gray-600">Purchase, redeem, balance</p>
+                </a>
+                <a href="#" class="group border border-gray-200 p-8 text-center hover:border-black transition">
+                    <i class="fas fa-question-circle text-4xl mb-4 text-gray-700 group-hover:text-black"></i>
+                    <h3 class="font-bold text-lg mb-1">FAQs</h3>
+                    <p class="text-sm text-gray-600">Common questions</p>
+                </a>
+                <a href="#" class="group border border-gray-200 p-8 text-center hover:border-black transition">
+                    <i class="fas fa-headset text-4xl mb-4 text-gray-700 group-hover:text-black"></i>
+                    <h3 class="font-bold text-lg mb-1">Contact Us</h3>
+                    <p class="text-sm text-gray-600">Get in touch with support</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Articles -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-['Playfair_Display'] text-3xl font-bold text-center mb-8">Popular Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 border border-gray-200">
+                    <h3 class="font-bold text-lg mb-2"><a href="#" class="hover:text-gray-600">How to Track Your Order</a></h3>
+                    <p class="text-gray-600 text-sm mb-2">Learn how to check the status of your shipment.</p>
+                    <a href="#" class="text-sm text-black hover:underline">Read more →</a>
+                </div>
+                <div class="bg-white p-6 border border-gray-200">
+                    <h3 class="font-bold text-lg mb-2"><a href="#" class="hover:text-gray-600">What is Your Return Policy?</a></h3>
+                    <p class="text-gray-600 text-sm mb-2">Details on returns, exchanges, and refunds.</p>
+                    <a href="#" class="text-sm text-black hover:underline">Read more →</a>
+                </div>
+                <div class="bg-white p-6 border border-gray-200">
+                    <h3 class="font-bold text-lg mb-2"><a href="#" class="hover:text-gray-600">How to Change Your Password</a></h3>
+                    <p class="text-gray-600 text-sm mb-2">Step-by-step guide to updating your password.</p>
+                    <a href="#" class="text-sm text-black hover:underline">Read more →</a>
+                </div>
+                <div class="bg-white p-6 border border-gray-200">
+                    <h3 class="font-bold text-lg mb-2"><a href="#" class="hover:text-gray-600">Accepted Payment Methods</a></h3>
+                    <p class="text-gray-600 text-sm mb-2">See which payment options we accept.</p>
+                    <a href="#" class="text-sm text-black hover:underline">Read more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Need Help -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-['Playfair_Display'] text-3xl font-bold mb-4">Still Need Help?</h2>
+            <p class="text-gray-600 text-lg mb-8">Our support team is ready to assist you.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="contact.html" class="bg-black text-white px-8 py-4 font-bold uppercase tracking-wider hover:bg-gray-800 transition">Contact Us</a>
+                <a href="#" class="border border-black text-black px-8 py-4 font-bold uppercase tracking-wider hover:bg-black hover:text-white transition">FAQs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-white mb-4 inline-block">E‑COMMERCE</a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Curating the finest minimalist essentials since 2020.</p>
+                    <div class="flex space-x-5">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Shop</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="shop.html" class="hover:text-white transition">All Products</a></li>
+                        <li><a href="categories.html" class="hover:text-white transition">Categories</a></li>
+                        <li><a href="flash-sale.html" class="hover:text-white transition">Flash Sale</a></li>
+                        <li><a href="gift-cards.html" class="hover:text-white transition">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Support</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="shipping.html" class="hover:text-white transition">Shipping</a></li>
+                        <li><a href="returns.html" class="hover:text-white transition">Returns</a></li>
+                        <li><a href="track.html" class="hover:text-white transition">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Journal</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">Terms</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 E-COMMERCE. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                    <a href="shipping.html" class="hover:text-white transition">Shipping Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

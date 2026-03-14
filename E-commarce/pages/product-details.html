@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Cleanser | E-COMMERCE</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Product gallery thumbnails */
+        .thumbnail-active {
+            border: 2px solid black;
+            opacity: 1;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.open {
+            max-height: 300px; /* adjust as needed */
+        }
+    </style>
+</head>
+<body class="font-['Inter'] bg-white text-gray-900 antialiased">
+
+    <!-- ========== NAVBAR (same as before) ========== -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-black tracking-tight">E‑COMMERCE</a>
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10">
+                    <a href="shop.html" class="text-black font-medium text-sm uppercase tracking-wider border-b-2 border-black pb-1">Shop</a>
+                    <a href="categories.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Categories</a>
+                    <a href="blog.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Journal</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Connect</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="search.html" class="text-gray-700 hover:text-black transition hidden sm:block"><i class="fas fa-search text-lg"></i></a>
+                    <a href="account-settings.html" class="text-gray-700 hover:text-black transition hidden sm:block"><i class="far fa-user text-lg"></i></a>
+                    <a href="wishlist.html" class="text-gray-700 hover:text-black transition relative hidden sm:block">
+                        <i class="far fa-heart text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                    </a>
+                    <a href="cart.html" class="text-gray-700 hover:text-black transition relative">
+                        <i class="fas fa-shopping-bag text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">2</span>
+                    </a>
+                    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="shop.html" class="block text-black py-2 text-base">Shop</a>
+                <a href="categories.html" class="block text-gray-800 hover:text-black py-2 text-base">Categories</a>
+                <a href="blog.html" class="block text-gray-800 hover:text-black py-2 text-base">Journal</a>
+                <a href="contact.html" class="block text-gray-800 hover:text-black py-2 text-base">Connect</a>
+                <div class="pt-4 flex space-x-4 text-gray-600">
+                    <a href="search.html" class="hover:text-black"><i class="fas fa-search"></i></a>
+                    <a href="account-settings.html" class="hover:text-black"><i class="far fa-user"></i></a>
+                    <a href="wishlist.html" class="hover:text-black"><i class="far fa-heart"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== BREADCRUMB ========== -->
+    <div class="bg-gray-50 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-black">Home</a> <span class="mx-2">/</span>
+                <a href="shop.html" class="hover:text-black">Shop</a> <span class="mx-2">/</span>
+                <span class="text-black">Minimalist Cleanser</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== PRODUCT MAIN SECTION ========== -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Product Images Gallery -->
+                <div>
+                    <div class="mb-4">
+                        <img id="mainImage" src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Product main image" class="w-full h-[500px] object-cover object-center">
+                    </div>
+                    <div class="grid grid-cols-4 gap-3">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Thumbnail 1" class="h-24 w-full object-cover object-center cursor-pointer border-2 border-black" onclick="changeImage(this)">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Thumbnail 2" class="h-24 w-full object-cover object-center cursor-pointer border-2 border-transparent hover:border-black" onclick="changeImage(this)">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Thumbnail 3" class="h-24 w-full object-cover object-center cursor-pointer border-2 border-transparent hover:border-black" onclick="changeImage(this)">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Thumbnail 4" class="h-24 w-full object-cover object-center cursor-pointer border-2 border-transparent hover:border-black" onclick="changeImage(this)">
+                    </div>
+                </div>
+
+                <!-- Product Details -->
+                <div>
+                    <h1 class="font-['Playfair_Display'] text-4xl font-bold mb-2">Minimalist Cleanser</h1>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 text-sm mr-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm">(124 reviews)</span>
+                    </div>
+                    <p class="text-3xl font-bold mb-6">$34.00</p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        A gentle, foaming cleanser that removes impurities without stripping the skin. Formulated with soothing botanical extracts, it leaves your face feeling fresh and balanced. Perfect for daily use, even on sensitive skin.
+                    </p>
+
+                    <!-- Variants (Size) -->
+                    <div class="mb-6">
+                        <h3 class="font-medium mb-2">Size</h3>
+                        <div class="flex space-x-3">
+                            <span class="border border-gray-300 px-6 py-3 text-sm cursor-pointer hover:bg-black hover:text-white transition selected-variant">150ml</span>
+                            <span class="border border-gray-300 px-6 py-3 text-sm cursor-pointer hover:bg-black hover:text-white transition">250ml</span>
+                            <span class="border border-gray-300 px-6 py-3 text-sm cursor-pointer hover:bg-black hover:text-white transition">500ml</span>
+                        </div>
+                    </div>
+
+                    <!-- Quantity & Add to Cart -->
+                    <div class="flex flex-wrap items-center gap-4 mb-8">
+                        <div class="flex border border-gray-300">
+                            <button class="px-4 py-3 hover:bg-gray-100" onclick="decreaseQty()">−</button>
+                            <input type="number" id="quantity" value="1" min="1" class="w-16 text-center border-x border-gray-300 focus:outline-none">
+                            <button class="px-4 py-3 hover:bg-gray-100" onclick="increaseQty()">+</button>
+                        </div>
+                        <button class="flex-1 bg-black text-white py-4 px-6 text-sm font-bold uppercase tracking-wider hover:bg-gray-800 transition">Add to Cart</button>
+                        <button class="border border-gray-300 p-4 hover:bg-black hover:text-white transition"><i class="far fa-heart"></i></button>
+                    </div>
+
+                    <!-- Accordion Sections (Details, Shipping, Returns) -->
+                    <div class="border-t border-gray-200">
+                        <!-- Details -->
+                        <div class="border-b border-gray-200">
+                            <button class="flex justify-between items-center w-full py-5 text-left font-medium" onclick="toggleAccordion('details')">
+                                <span>Product Details</span>
+                                <i class="fas fa-chevron-down transition-transform" id="icon-details"></i>
+                            </button>
+                            <div id="details" class="accordion-content open">
+                                <p class="pb-5 text-gray-600">
+                                    • Sulfate-free formula<br>
+                                    • Enriched with aloe vera and green tea<br>
+                                    • pH balanced<br>
+                                    • Cruelty-free & vegan<br>
+                                    • Made in USA
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Shipping -->
+                        <div class="border-b border-gray-200">
+                            <button class="flex justify-between items-center w-full py-5 text-left font-medium" onclick="toggleAccordion('shipping')">
+                                <span>Shipping & Returns</span>
+                                <i class="fas fa-chevron-down" id="icon-shipping"></i>
+                            </button>
+                            <div id="shipping" class="accordion-content">
+                                <p class="pb-5 text-gray-600">
+                                    Free standard shipping on orders over $50. Delivery within 3-5 business days. Returns accepted within 30 days of purchase in original condition.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Ingredients -->
+                        <div class="border-b border-gray-200">
+                            <button class="flex justify-between items-center w-full py-5 text-left font-medium" onclick="toggleAccordion('ingredients')">
+                                <span>Ingredients</span>
+                                <i class="fas fa-chevron-down" id="icon-ingredients"></i>
+                            </button>
+                            <div id="ingredients" class="accordion-content">
+                                <p class="pb-5 text-gray-600">
+                                    Water, Glycerin, Cocamidopropyl Betaine, Aloe Barbadensis Leaf Juice, Camellia Sinensis Leaf Extract, Citric Acid, Sodium Benzoate.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RELATED PRODUCTS ========== -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-['Playfair_Display'] text-3xl font-bold mb-10 text-center">You May Also Like</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Related Product 1 -->
+                <div class="product-card group">
+                    <div class="relative overflow-hidden bg-white mb-4">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Product" class="w-full h-64 object-cover object-center group-hover:scale-105 transition duration-700">
+                        <div class="product-actions absolute bottom-4 left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 transition">
+                            <button class="bg-white text-black px-4 py-2 rounded-none text-xs font-bold uppercase tracking-wider hover:bg-black hover:text-white transition shadow-md">Quick View</button>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold"><a href="product-details.html">Black Clay Mask</a></h3>
+                    <p class="text-gray-600">$28.00</p>
+                </div>
+                <!-- Related Product 2 -->
+                <div class="product-card group">
+                    <div class="relative overflow-hidden bg-white mb-4">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Product" class="w-full h-64 object-cover object-center group-hover:scale-105 transition duration-700">
+                        <div class="product-actions absolute bottom-4 left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 transition">
+                            <button class="bg-white text-black px-4 py-2 rounded-none text-xs font-bold uppercase tracking-wider hover:bg-black hover:text-white transition shadow-md">Quick View</button>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold"><a href="product-details.html">Hydrating Toner</a></h3>
+                    <p class="text-gray-600">$22.00</p>
+                </div>
+                <!-- Related Product 3 -->
+                <div class="product-card group">
+                    <div class="relative overflow-hidden bg-white mb-4">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Product" class="w-full h-64 object-cover object-center group-hover:scale-105 transition duration-700">
+                        <div class="product-actions absolute bottom-4 left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 transition">
+                            <button class="bg-white text-black px-4 py-2 rounded-none text-xs font-bold uppercase tracking-wider hover:bg-black hover:text-white transition shadow-md">Quick View</button>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold"><a href="product-details.html">Sculpting Serum</a></h3>
+                    <p class="text-gray-600">$52.00</p>
+                </div>
+                <!-- Related Product 4 -->
+                <div class="product-card group">
+                    <div class="relative overflow-hidden bg-white mb-4">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Product" class="w-full h-64 object-cover object-center group-hover:scale-105 transition duration-700">
+                        <div class="product-actions absolute bottom-4 left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 transition">
+                            <button class="bg-white text-black px-4 py-2 rounded-none text-xs font-bold uppercase tracking-wider hover:bg-black hover:text-white transition shadow-md">Quick View</button>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold"><a href="product-details.html">Body Lotion</a></h3>
+                    <p class="text-gray-600">$18.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER (same as before) ========== -->
+    <footer class="bg-black text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-white mb-4 inline-block">E‑COMMERCE</a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Curating the finest minimalist essentials since 2020.</p>
+                    <div class="flex space-x-5">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Shop</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="shop.html" class="hover:text-white transition">All Products</a></li>
+                        <li><a href="categories.html" class="hover:text-white transition">Categories</a></li>
+                        <li><a href="flash-sale.html" class="hover:text-white transition">Flash Sale</a></li>
+                        <li><a href="gift-cards.html" class="hover:text-white transition">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Support</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="shipping.html" class="hover:text-white transition">Shipping</a></li>
+                        <li><a href="returns.html" class="hover:text-white transition">Returns</a></li>
+                        <li><a href="track.html" class="hover:text-white transition">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Journal</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">Terms</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 E-COMMERCE. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                    <a href="shipping.html" class="hover:text-white transition">Shipping Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../js/script.js"></script>
+    <script>
+        // Change main image on thumbnail click
+        function changeImage(thumbnail) {
+            document.getElementById('mainImage').src = thumbnail.src;
+            // Remove active class from all thumbnails
+            document.querySelectorAll('.grid img').forEach(img => {
+                img.classList.remove('border-black');
+                img.classList.add('border-transparent');
+            });
+            thumbnail.classList.remove('border-transparent');
+            thumbnail.classList.add('border-black');
+        }
+
+        // Quantity controls
+        function decreaseQty() {
+            let qty = document.getElementById('quantity');
+            if (parseInt(qty.value) > 1) qty.value = parseInt(qty.value) - 1;
+        }
+        function increaseQty() {
+            let qty = document.getElementById('quantity');
+            qty.value = parseInt(qty.value) + 1;
+        }
+
+        // Accordion toggle
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            content.classList.toggle('open');
+            if (content.classList.contains('open')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+
+        // Initially open the first accordion (details)
+        window.onload = function() {
+            document.getElementById('details').classList.add('open');
+        };
+    </script>
+</body>
+</html>

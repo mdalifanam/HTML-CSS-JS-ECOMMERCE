@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Layering Fragrances | E-COMMERCE Journal</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="font-['Inter'] bg-white text-gray-900 antialiased">
+
+    <!-- Navbar (same as before, with active state) -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-black tracking-tight">E‑COMMERCE</a>
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10">
+                    <a href="shop.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Shop</a>
+                    <a href="categories.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Categories</a>
+                    <a href="blog.html" class="text-black font-medium text-sm uppercase tracking-wider border-b-2 border-black pb-1">Journal</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Connect</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="login.html" class="text-gray-700 hover:text-black transition hidden sm:block">
+                        <i class="far fa-user text-lg"></i>
+                    </a>
+                    <a href="cart.html" class="text-gray-700 hover:text-black transition relative">
+                        <i class="fas fa-shopping-bag text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">2</span>
+                    </a>
+                    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="shop.html" class="block text-gray-800 hover:text-black py-2 text-base">Shop</a>
+                <a href="categories.html" class="block text-gray-800 hover:text-black py-2 text-base">Categories</a>
+                <a href="blog.html" class="block text-black py-2 text-base">Journal</a>
+                <a href="contact.html" class="block text-gray-800 hover:text-black py-2 text-base">Connect</a>
+                <div class="pt-4 flex space-x-4 text-gray-600">
+                    <a href="login.html" class="hover:text-black"><i class="far fa-user"></i> Login</a>
+                    <a href="cart.html" class="hover:text-black"><i class="fas fa-shopping-bag"></i> Cart</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-black">Home</a> <span class="mx-2">/</span>
+                <a href="blog.html" class="hover:text-black">Journal</a> <span class="mx-2">/</span>
+                <span class="text-black">The Art of Layering Fragrances</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Post Content -->
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Article Header -->
+            <div class="mb-8">
+                <h1 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-4">The Art of Layering Fragrances</h1>
+                <div class="flex items-center text-gray-600 text-sm mb-6">
+                    <span>By <span class="text-black font-medium">Emma Clarke</span></span>
+                    <span class="mx-3">•</span>
+                    <span>March 10, 2026</span>
+                    <span class="mx-3">•</span>
+                    <span>5 min read</span>
+                </div>
+                <div class="flex space-x-3">
+                    <span class="bg-gray-100 text-gray-800 px-3 py-1 text-xs uppercase tracking-wider">Fragrance</span>
+                    <span class="bg-gray-100 text-gray-800 px-3 py-1 text-xs uppercase tracking-wider">Guides</span>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mb-10">
+                <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Fragrance layering" class="w-full h-[500px] object-cover object-center">
+                <p class="text-gray-500 text-sm mt-2">Photo: Minimalist fragrance collection</p>
+            </div>
+
+            <!-- Article Body -->
+            <div class="prose prose-lg max-w-none mb-12">
+                <p class="text-xl text-gray-700 leading-relaxed mb-6">Layering fragrances is like composing a personal symphony—each note contributes to a unique olfactory experience. When done right, it creates a signature scent that lingers beautifully throughout the day.</p>
+                
+                <h2 class="font-['Playfair_Display'] text-2xl font-bold mt-8 mb-4">Why Layer?</h2>
+                <p class="text-gray-700 mb-4">Layering allows you to customize your fragrance, making it more complex and personal. It can also extend the longevity of lighter scents and soften stronger ones. The key is balance.</p>
+                
+                <h2 class="font-['Playfair_Display'] text-2xl font-bold mt-8 mb-4">The Basics: Notes & Families</h2>
+                <p class="text-gray-700 mb-4">Fragrances are built with top, middle, and base notes. When layering, start with a base scent (like vanilla or musk), then add a middle note (floral or spice), and finish with a fresh top note (citrus or green).</p>
+                <p class="text-gray-700 mb-4">Stick to complementary fragrance families—for example, woody and citrus, or floral and gourmand. Avoid mixing too many strong notes that compete.</p>
+                
+                <h2 class="font-['Playfair_Display'] text-2xl font-bold mt-8 mb-4">Step-by-Step Guide</h2>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700 mb-6">
+                    <li><strong>Start clean:</strong> Apply unscented moisturizer to create a base.</li>
+                    <li><strong>Layer from heaviest to lightest:</strong> Apply the strongest scent first (usually base notes), then lighter ones on top.</li>
+                    <li><strong>Focus on pulse points:</strong> Wrists, neck, behind ears—areas where warmth helps diffuse the scent.</li>
+                    <li><strong>Test and adjust:</strong> Try combinations on skin before committing; body chemistry affects the final aroma.</li>
+                </ol>
+                
+                <h2 class="font-['Playfair_Display'] text-2xl font-bold mt-8 mb-4">Our Favorite Combinations</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                    <li><strong>Vanilla + Sandalwood:</strong> Warm, creamy, and grounding.</li>
+                    <li><strong>Rose + Oud:</strong> Romantic with an exotic edge.</li>
+                    <li><strong>Bergamot + Musk:</strong> Fresh yet sensual.</li>
+                    <li><strong>Jasmine + Amber:</strong> Floral and rich.</li>
+                </ul>
+                
+                <blockquote class="border-l-4 border-black pl-6 italic text-gray-700 my-8">
+                    "Perfume is the art that makes memory speak." – Francis Kurkdjian
+                </blockquote>
+                
+                <p class="text-gray-700 mb-4">Experiment with our selection of <a href="shop.html?category=fragrance" class="text-black font-medium underline">layering-friendly fragrances</a> and discover your unique signature.</p>
+            </div>
+
+            <!-- Author Bio & Share -->
+            <div class="border-t border-gray-200 pt-8 mb-12">
+                <div class="flex flex-col sm:flex-row justify-between items-center">
+                    <div class="flex items-center mb-4 sm:mb-0">
+                        <div class="w-16 h-16 bg-gray-300 rounded-full overflow-hidden mr-4">
+                            <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Emma Clarke" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Emma Clarke</h4>
+                            <p class="text-gray-600 text-sm">Fragrance expert & minimalist lifestyle writer</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-3">
+                        <span class="text-gray-600 text-sm mr-2">Share:</span>
+                        <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-black"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments Section (Placeholder) -->
+            <div class="border-t border-gray-200 pt-8 mb-12">
+                <h3 class="font-['Playfair_Display'] text-2xl font-bold mb-6">Comments (2)</h3>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="User" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-bold">Sarah J.</h4>
+                                <span class="text-gray-500 text-sm">2 days ago</span>
+                            </div>
+                            <p class="text-gray-700 mt-1">Loved the vanilla + sandalwood combination! I've been layering these two for months and always get compliments. Thanks for the great guide.</p>
+                            <button class="text-sm text-gray-500 hover:text-black mt-2">Reply</button>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 ml-8">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="User" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-bold">Emma Clarke</h4>
+                                <span class="text-gray-500 text-sm">1 day ago</span>
+                            </div>
+                            <p class="text-gray-700 mt-1">So glad you enjoyed it, Sarah! That combo is a personal favorite of mine too. 😊</p>
+                            <button class="text-sm text-gray-500 hover:text-black mt-2">Reply</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Leave a comment form -->
+                <div class="mt-8">
+                    <h4 class="font-bold mb-4">Leave a comment</h4>
+                    <form>
+                        <textarea rows="4" class="w-full border border-gray-300 p-3 focus:outline-none focus:border-black mb-4" placeholder="Your comment..."></textarea>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <input type="text" placeholder="Your name" class="border border-gray-300 p-3 focus:outline-none focus:border-black">
+                            <input type="email" placeholder="Your email" class="border border-gray-300 p-3 focus:outline-none focus:border-black">
+                        </div>
+                        <button class="bg-black text-white px-6 py-3 text-sm font-bold uppercase tracking-wider hover:bg-gray-800 transition">Post Comment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Posts -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-['Playfair_Display'] text-3xl font-bold text-center mb-12">You Might Also Like</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="blog-card group">
+                    <a href="blog-details.html" class="block overflow-hidden bg-gray-100 mb-4">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Blog post" class="w-full h-48 object-cover object-center group-hover:scale-105 transition duration-700">
+                    </a>
+                    <h3 class="font-['Playfair_Display'] text-xl font-bold mb-2"><a href="blog-details.html" class="hover:text-gray-600">Minimalist Skincare Routine</a></h3>
+                    <p class="text-gray-600 text-sm mb-2">February 28, 2026</p>
+                </div>
+                <div class="blog-card group">
+                    <a href="blog-details.html" class="block overflow-hidden bg-gray-100 mb-4">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Blog post" class="w-full h-48 object-cover object-center group-hover:scale-105 transition duration-700">
+                    </a>
+                    <h3 class="font-['Playfair_Display'] text-xl font-bold mb-2"><a href="blog-details.html" class="hover:text-gray-600">Black & White Interiors</a></h3>
+                    <p class="text-gray-600 text-sm mb-2">January 15, 2026</p>
+                </div>
+                <div class="blog-card group">
+                    <a href="blog-details.html" class="block overflow-hidden bg-gray-100 mb-4">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Blog post" class="w-full h-48 object-cover object-center group-hover:scale-105 transition duration-700">
+                    </a>
+                    <h3 class="font-['Playfair_Display'] text-xl font-bold mb-2"><a href="blog-details.html" class="hover:text-gray-600">Gift Guide for Minimalists</a></h3>
+                    <p class="text-gray-600 text-sm mb-2">December 5, 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as before) -->
+    <footer class="bg-black text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-white mb-4 inline-block">E‑COMMERCE</a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Curating the finest minimalist essentials since 2020.</p>
+                    <div class="flex space-x-5">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Shop</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="shop.html" class="hover:text-white transition">All Products</a></li>
+                        <li><a href="categories.html" class="hover:text-white transition">Categories</a></li>
+                        <li><a href="flash-sale.html" class="hover:text-white transition">Flash Sale</a></li>
+                        <li><a href="gift-cards.html" class="hover:text-white transition">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Support</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="shipping.html" class="hover:text-white transition">Shipping</a></li>
+                        <li><a href="returns.html" class="hover:text-white transition">Returns</a></li>
+                        <li><a href="track.html" class="hover:text-white transition">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Journal</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">Terms</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 E-COMMERCE. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                    <a href="shipping.html" class="hover:text-white transition">Shipping Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

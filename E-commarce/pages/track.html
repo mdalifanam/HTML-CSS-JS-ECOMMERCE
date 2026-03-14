@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order | E-COMMERCE</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="font-['Inter'] bg-white text-gray-900 antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-black tracking-tight">E‑COMMERCE</a>
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10">
+                    <a href="shop.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Shop</a>
+                    <a href="categories.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Categories</a>
+                    <a href="blog.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Journal</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Connect</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="login.html" class="text-gray-700 hover:text-black transition hidden sm:block">
+                        <i class="far fa-user text-lg"></i>
+                    </a>
+                    <a href="wishlist.html" class="text-gray-700 hover:text-black transition relative hidden sm:block">
+                        <i class="far fa-heart text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+                    </a>
+                    <a href="cart.html" class="text-gray-700 hover:text-black transition relative">
+                        <i class="fas fa-shopping-bag text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">2</span>
+                    </a>
+                    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="shop.html" class="block text-gray-800 hover:text-black py-2 text-base">Shop</a>
+                <a href="categories.html" class="block text-gray-800 hover:text-black py-2 text-base">Categories</a>
+                <a href="blog.html" class="block text-gray-800 hover:text-black py-2 text-base">Journal</a>
+                <a href="contact.html" class="block text-gray-800 hover:text-black py-2 text-base">Connect</a>
+                <div class="pt-4 flex space-x-4 text-gray-600">
+                    <a href="login.html" class="hover:text-black"><i class="far fa-user"></i> Login</a>
+                    <a href="wishlist.html" class="hover:text-black"><i class="far fa-heart"></i> Wishlist</a>
+                    <a href="cart.html" class="hover:text-black"><i class="fas fa-shopping-bag"></i> Cart</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-black">Home</a> <span class="mx-2">/</span>
+                <span class="text-black">Track Order</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-4">Track Your Order</h1>
+            <p class="text-gray-600 text-lg">Enter your order number and email to see the current status.</p>
+        </div>
+    </section>
+
+    <!-- Tracking Form -->
+    <section class="pb-12">
+        <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
+            <form id="trackingForm" class="space-y-6" onsubmit="event.preventDefault(); showTrackingResult();">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Order Number *</label>
+                    <input type="text" id="orderNumber" required placeholder="e.g., #2026-0314" class="w-full border border-gray-300 p-3 focus:outline-none focus:border-black">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Email Address *</label>
+                    <input type="email" id="email" required placeholder="Used at checkout" class="w-full border border-gray-300 p-3 focus:outline-none focus:border-black">
+                </div>
+                <button type="submit" class="w-full bg-black text-white py-3 font-bold uppercase tracking-wider hover:bg-gray-800 transition">Track Order</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Tracking Result (initially hidden) -->
+    <section id="trackingResult" class="pb-20 hidden">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border border-gray-200 p-8">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h2 class="font-['Playfair_Display'] text-2xl font-bold mb-1">Order #2026-0314</h2>
+                        <p class="text-gray-600">Placed on March 14, 2026</p>
+                    </div>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 text-sm font-medium">Delivered</span>
+                </div>
+
+                <!-- Tracking Timeline -->
+                <div class="space-y-4">
+                    <div class="flex">
+                        <div class="flex flex-col items-center mr-4">
+                            <div class="w-4 h-4 bg-green-600 rounded-full"></div>
+                            <div class="w-0.5 h-12 bg-gray-300"></div>
+                        </div>
+                        <div>
+                            <p class="font-medium">Delivered</p>
+                            <p class="text-sm text-gray-600">March 17, 2026 • 2:30 PM</p>
+                            <p class="text-sm text-gray-500">Your package was left at the front door.</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="flex flex-col items-center mr-4">
+                            <div class="w-4 h-4 bg-green-600 rounded-full"></div>
+                            <div class="w-0.5 h-12 bg-gray-300"></div>
+                        </div>
+                        <div>
+                            <p class="font-medium">Out for Delivery</p>
+                            <p class="text-sm text-gray-600">March 17, 2026 • 8:45 AM</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="flex flex-col items-center mr-4">
+                            <div class="w-4 h-4 bg-green-600 rounded-full"></div>
+                            <div class="w-0.5 h-12 bg-gray-300"></div>
+                        </div>
+                        <div>
+                            <p class="font-medium">Arrived at Local Facility</p>
+                            <p class="text-sm text-gray-600">March 16, 2026 • 11:20 PM</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="flex flex-col items-center mr-4">
+                            <div class="w-4 h-4 bg-green-600 rounded-full"></div>
+                            <div class="w-0.5 h-12 bg-gray-300"></div>
+                        </div>
+                        <div>
+                            <p class="font-medium">Shipped</p>
+                            <p class="text-sm text-gray-600">March 15, 2026 • 9:10 AM</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="flex items-center mr-4">
+                            <div class="w-4 h-4 bg-green-600 rounded-full"></div>
+                        </div>
+                        <div>
+                            <p class="font-medium">Order Placed</p>
+                            <p class="text-sm text-gray-600">March 14, 2026 • 3:22 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <a href="my-orders.html" class="flex-1 border border-black text-black text-center py-3 font-bold uppercase tracking-wider hover:bg-black hover:text-white transition">View Order Details</a>
+                    <a href="contact.html" class="flex-1 bg-black text-white text-center py-3 font-bold uppercase tracking-wider hover:bg-gray-800 transition">Need Help?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-white mb-4 inline-block">E‑COMMERCE</a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Curating the finest minimalist essentials since 2020.</p>
+                    <div class="flex space-x-5">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Shop</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="shop.html" class="hover:text-white transition">All Products</a></li>
+                        <li><a href="categories.html" class="hover:text-white transition">Categories</a></li>
+                        <li><a href="flash-sale.html" class="hover:text-white transition">Flash Sale</a></li>
+                        <li><a href="gift-cards.html" class="hover:text-white transition">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Support</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="shipping.html" class="hover:text-white transition">Shipping</a></li>
+                        <li><a href="returns.html" class="hover:text-white transition">Returns</a></li>
+                        <li><a href="track.html" class="hover:text-white transition">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Journal</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">Terms</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 E-COMMERCE. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                    <a href="shipping.html" class="hover:text-white transition">Shipping Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        function showTrackingResult() {
+            document.getElementById('trackingResult').classList.remove('hidden');
+            // In a real app, you'd fetch data based on form input
+        }
+    </script>
+</body>
+</html>

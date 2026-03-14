@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | E-COMMERCE</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="font-['Inter'] bg-white text-gray-900 antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-black tracking-tight">E‑COMMERCE</a>
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10">
+                    <a href="shop.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Shop</a>
+                    <a href="categories.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Categories</a>
+                    <a href="blog.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Journal</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-black font-medium text-sm uppercase tracking-wider transition border-b-2 border-transparent hover:border-black pb-1">Connect</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="login.html" class="text-gray-700 hover:text-black transition hidden sm:block">
+                        <i class="far fa-user text-lg"></i>
+                    </a>
+                    <a href="wishlist.html" class="text-gray-700 hover:text-black transition relative hidden sm:block">
+                        <i class="far fa-heart text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+                    </a>
+                    <a href="cart.html" class="text-gray-700 hover:text-black transition relative">
+                        <i class="fas fa-shopping-bag text-lg"></i>
+                        <span class="absolute -top-2 -right-3 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">2</span>
+                    </a>
+                    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="shop.html" class="block text-gray-800 hover:text-black py-2 text-base">Shop</a>
+                <a href="categories.html" class="block text-gray-800 hover:text-black py-2 text-base">Categories</a>
+                <a href="blog.html" class="block text-gray-800 hover:text-black py-2 text-base">Journal</a>
+                <a href="contact.html" class="block text-gray-800 hover:text-black py-2 text-base">Connect</a>
+                <div class="pt-4 flex space-x-4 text-gray-600">
+                    <a href="login.html" class="hover:text-black"><i class="far fa-user"></i> Login</a>
+                    <a href="wishlist.html" class="hover:text-black"><i class="far fa-heart"></i> Wishlist</a>
+                    <a href="cart.html" class="hover:text-black"><i class="fas fa-shopping-bag"></i> Cart</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-black">Home</a> <span class="mx-2">/</span>
+                <a href="about.html" class="hover:text-black">About</a> <span class="mx-2">/</span>
+                <span class="text-black">Our Team</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-4">Meet the Team</h1>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">The people behind E‑COMMERCE – passionate about minimalism, design, and creating exceptional experiences.</p>
+        </div>
+    </section>
+
+    <!-- Team Grid -->
+    <section class="pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="text-center group">
+                    <div class="w-64 h-64 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200 border-2 border-transparent group-hover:border-black transition">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Emma Clarke" class="w-full h-full object-cover object-center">
+                    </div>
+                    <h3 class="font-bold text-xl">Emma Clarke</h3>
+                    <p class="text-gray-600 mb-2">Founder & Creative Director</p>
+                    <p class="text-sm text-gray-500 max-w-xs mx-auto">Emma's vision for mindful consumption drives every product we create.</p>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="text-center group">
+                    <div class="w-64 h-64 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200 border-2 border-transparent group-hover:border-black transition">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="James Chen" class="w-full h-full object-cover object-center">
+                    </div>
+                    <h3 class="font-bold text-xl">James Chen</h3>
+                    <p class="text-gray-600 mb-2">Head of Product</p>
+                    <p class="text-sm text-gray-500">James ensures every item meets our high standards for quality and design.</p>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="text-center group">
+                    <div class="w-64 h-64 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200 border-2 border-transparent group-hover:border-black transition">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Sofia Reyes" class="w-full h-full object-cover object-center">
+                    </div>
+                    <h3 class="font-bold text-xl">Sofia Reyes</h3>
+                    <p class="text-gray-600 mb-2">Marketing Director</p>
+                    <p class="text-sm text-gray-500">Sofia tells our story and connects us with the minimalist community.</p>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="text-center group">
+                    <div class="w-64 h-64 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200 border-2 border-transparent group-hover:border-black transition">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Michael Okonkwo" class="w-full h-full object-cover object-center">
+                    </div>
+                    <h3 class="font-bold text-xl">Michael Okonkwo</h3>
+                    <p class="text-gray-600 mb-2">Customer Experience Lead</p>
+                    <p class="text-sm text-gray-500">Michael ensures every interaction with us is seamless and delightful.</p>
+                </div>
+                <!-- Team Member 5 -->
+                <div class="text-center group">
+                    <div class="w-64 h-64 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200 border-2 border-transparent group-hover:border-black transition">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Priya Patel" class="w-full h-full object-cover object-center">
+                    </div>
+                    <h3 class="font-bold text-xl">Priya Patel</h3>
+                    <p class="text-gray-600 mb-2">Operations Manager</p>
+                    <p class="text-sm text-gray-500">Priya keeps everything running smoothly behind the scenes.</p>
+                </div>
+                <!-- Team Member 6 -->
+                <div class="text-center group">
+                    <div class="w-64 h-64 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200 border-2 border-transparent group-hover:border-black transition">
+                        <img src="https://img.freepik.com/premium-photo/set-cosmetic-bottles-minimalist-black-white-theme-simple-elegant-product-showcase_875755-18260.jpg" alt="Lars Johansson" class="w-full h-full object-cover object-center">
+                    </div>
+                    <h3 class="font-bold text-xl">Lars Johansson</h3>
+                    <p class="text-gray-600 mb-2">Lead Designer</p>
+                    <p class="text-sm text-gray-500">Lars crafts the clean, timeless aesthetic you see across our brand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us CTA -->
+    <section class="py-16 bg-black text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl font-bold mb-4">Join Our Team</h2>
+            <p class="text-gray-300 text-lg mb-8">We're always looking for passionate people to help us grow.</p>
+            <a href="careers.html" class="inline-block bg-white text-black px-8 py-4 font-bold uppercase tracking-wider hover:bg-gray-200 transition">View Openings</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="../index.html" class="font-['Playfair_Display'] text-3xl font-black text-white mb-4 inline-block">E‑COMMERCE</a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Curating the finest minimalist essentials since 2020.</p>
+                    <div class="flex space-x-5">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Shop</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="shop.html" class="hover:text-white transition">All Products</a></li>
+                        <li><a href="categories.html" class="hover:text-white transition">Categories</a></li>
+                        <li><a href="flash-sale.html" class="hover:text-white transition">Flash Sale</a></li>
+                        <li><a href="gift-cards.html" class="hover:text-white transition">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Support</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="shipping.html" class="hover:text-white transition">Shipping</a></li>
+                        <li><a href="returns.html" class="hover:text-white transition">Returns</a></li>
+                        <li><a href="track.html" class="hover:text-white transition">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Journal</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">Terms</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 E-COMMERCE. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                    <a href="shipping.html" class="hover:text-white transition">Shipping Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
